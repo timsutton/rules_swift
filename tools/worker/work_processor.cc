@@ -128,6 +128,7 @@ void WorkProcessor::ProcessWorkRequest(
   std::ostringstream stderr_stream;
   SwiftRunner swift_runner(processed_args, /*force_response_file=*/true);
 
+  sleep(300);
   int exit_code = swift_runner.Run(&stderr_stream, /*stdout_to_stderr=*/true);
 
   if (!is_wmo) {
